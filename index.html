@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Расчёт бюджета</title>
+		<link rel="stylesheet" href="style.css">
+ 
+		<script>
+		function addition() {
+			var a = parseInt(document.getElementById('a').value);
+			var b = parseInt(document.getElementById('b').value);
+ 
+			if (isNaN(a)==true) a=0;
+			if (isNaN(b)==true) b=0;
+ 
+			var c = a * b;
+ 
+			document.getElementById('result').innerHTML = "Ваш бюджет на контекстную рекламу составит " + c + " руб в месяц!";
+		}
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+		<form>
+      <h1>РАССЧИТАЙТЕ МЕСЯЧНЫЙ БЮДЖЕТ НА РЕКЛАМУ СВОЕГО БИЗНЕСА!</h1>
+      <p>Сколько Вы готовы платить за одного клиента?</p>
+			<input id="a" type="text" placeholder="Введите сумму в руб" class="textbox"><br>
+      <p>Сколько клиентов Вы можете обслуживать в течение месяца?</p>
+			<input id="b" type="text" placeholder="Введите целое число" class="textbox"><br>
+			<div id="but"><input type="button" value="Рассчитать бюджет" class="styled-button-8" onclick="addition();"></div><br>
+		</form>
+	<div id="result"></div>
+	</div>
+	</body>
+</html>
